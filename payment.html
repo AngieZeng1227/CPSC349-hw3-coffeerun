@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>coffeerun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+        crossorigin="anonymous" />
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun Payment</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+    </header>
+    <section>
+        <h2>Contact information</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-payment-order="form">
+                    <legend>Title</legend>
+
+                    <div class="radio">
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="Captain">
+                            Captain
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="Mr.">
+                            Mr.
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="Mrs.">
+                            Mrs.
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="title_4">
+                            <input type="radio" id="title_4" name="title" value="Ms.">
+                            Ms.
+                        </label>
+                    </div>
+
+                    <p>
+                        <label for="name">
+                            <span>Name: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input class="form-control" name="name" id="fullName" value="">
+                    </p>
+
+                    <p>
+                        <label for="mail">
+                            <span>E-mail: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value=""
+                            placeholder="dr@who.com">
+                    </p>
+
+                    <p>
+                        <label for="pwd">
+                            <span>Password: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input class="form-control" type="password" id="pwd" name="password">
+                    </p>
+
+                    <h2>Payment information</h2>
+
+
+                    <div class="form-group">
+                        <label for="card"><span>Card type:</span></label>
+                        <select id="card" class="form-control" name="usercard">
+                            <option value="visa">Visa</option>
+                            <option value="mc">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+                    <p>
+                        <label for="number">
+                            <span>Card number:</span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input class="form-control" type="tel" id="number" name="cardnumber">
+                    </p>
+                    <p>
+                        <label for="date">
+                            <span>Expiration date:</span>
+                            <strong><abbr title="required">*</abbr></strong>
+                            <em>formatted as mm/dd/yyyy</em>
+                        </label>
+                        <input class="form-control" type="date" id="date" name="expiration">
+                    </p>
+
+                    <button type="submit" class="btn btn-default" id="payment">Submit</button>
+
+                    <button type="reset" class="btn btn-default">Reset</button>
+
+                </form>
+                <div id="payment-modal" class="modal">
+        
+
+                </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <script src="scripts/formhandlerpayment.js" charset="utf-8"></script>
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/paymentmain.js" charset="utf-8"></script>
+</body>
+
+</html>
